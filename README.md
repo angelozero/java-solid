@@ -26,8 +26,7 @@
 ---
 
 ### OCP - Open Closed Principle ( Acomplamento e Estabilidade )
-
-### DIP - Dependency Inversion Principle — Princípio da Inversão de Dependência
+### DIP - Dependency Inversion Principle ( Princípio da Inversão de Dependência )
 
 ```java
   public class Principal {
