@@ -61,7 +61,7 @@
 
 ---
 
-###  Open Closed Principle ( Dependencia Inversa de Principios / Aberto - Fechado )
+### Open Closed Principle ( Dependencia Inversa de Principios / Aberto - Fechado )
 
 ```java
   /**
@@ -99,7 +99,7 @@
 
 ---
 
-### - Encapsulamento
+### Encapsulamento
 
 ```java
 ```
