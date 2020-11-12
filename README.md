@@ -1,7 +1,7 @@
 
 # Estudo de SOLID
 
-### Coesão
+### SRP - Single Responsibility Principle ( Classes coesas )
 
 ```java
   public class Principal {
