@@ -64,7 +64,9 @@
 ### Open Closed Principle ( Dependencia Inversa de Principios / Aberto - Fechado )
 
 ```java
-  /**
+
+  public class Principal {
+  	/**
 	 * 
 	 * Note que no exemplo a base, é fechada para
 	 * modificação; passando assim ser de responsabilidade das classe herdeiras,
@@ -78,8 +80,6 @@
 	 * 
 	 *
 	 */
-  public class Principal {
-
     public static void main(String[] args) {
 
       List<Compra> compras = Arrays.asList(new Compra(Estado.SP, 2000, "Notebook"), new Compra(Estado.RJ, 1000, "Monitor"), new Compra(Estado.BH, 1000, "Mouse"));
@@ -127,3 +127,49 @@ public class Principal {
 	}
 }
 ```
+
+---
+
+### Inheritance and the Liskov Substitutive Principle ( Herança e Principio de Liskov ( Composicao ) ) 
+
+public class Principal {
+
+	/**
+	 * 
+	 * Princípio de Liskov, toda classe filho tem que pensar nas pré-condições e
+	 * pós-condições do pai, e ela nunca pode quebrar. Na pré-condição, ela nunca
+	 * pode apertar. E na pós-condição, ela nunca pode afrouxar. Se não, as
+	 * referências que apontam pra classe pai, quando receberem uma classe filho,
+	 * não vão funcionar da maneira esperada.
+	 */
+	
+	public static void main(String[] args) {
+
+		for (Conta conta : contasDoBanco()) {
+			conta.rende(0.01);
+
+			System.out.println("Novo saldo: " + conta.saldo());
+		}
+
+	}
+
+	private static List<Conta> contasDoBanco() {
+		return Arrays.asList(geraContaDeEstudante(100), geraContaComum(200));
+	}
+
+	private static ContaDeEstudante geraContaDeEstudante(double valor) {
+
+		ContaDeEstudante contaDeEstudante = new ContaDeEstudante();
+		contaDeEstudante.deposita(valor);
+
+		return contaDeEstudante;
+	}
+
+	private static Conta geraContaComum(double valor) {
+
+		ContaComum contaComum = new ContaComum();
+		contaComum.deposita(valor);
+
+		return contaComum;
+	}
+}
