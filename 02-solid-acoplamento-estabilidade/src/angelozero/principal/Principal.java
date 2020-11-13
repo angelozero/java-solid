@@ -33,7 +33,5 @@ public class Principal {
 				Arrays.asList(new SalvaNotaFiscal(), new EnviaEmailNotaFiscal()));
 
 		servicoNotaFiscal.executaProcessosParaNotaFiscal(nf);
-
 	}
-
 }
