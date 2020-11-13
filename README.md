@@ -132,6 +132,7 @@ public class Principal {
 
 ### Inheritance and the Liskov Substitutive Principle ( Herança e Principio de Liskov ( Composicao ) ) 
 
+```java
 public class Principal {
 
 	/**
